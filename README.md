@@ -8,7 +8,7 @@ Septiana Dyah Anissawati : Customer (CRUD)
 Ari Nugroho : Login & Logout
 
 ## Link Test Plan :
-TestPlanTeam5
+[TestPlanTeam5](https://docs.google.com/document/d/1b1b2ZOZoG7D5RCbYE65cogX_MSZUU2PE/edit?usp=sharing&ouid=108501914389802072823&rtpof=true&sd=true)
 
 ## Link Spreadsheet :
 [ManualTesting](https://docs.google.com/spreadsheets/d/1pp3qPAeNok7nsu6IlUUHvC4B18C1dj9BmsQH5FJNnDw/edit?usp=sharing)
