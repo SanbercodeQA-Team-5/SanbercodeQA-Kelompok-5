@@ -1,0 +1,40 @@
+describe('Test Automation', () => {
+  it('berhasil ke laman Test Automation', () => {
+    cy.visit('https://itera-qa.azurewebsites.net/home/automation')
+    cy.get('.display-3')
+    cy.get(':nth-child(3) > .card-header')
+    cy.get(':nth-child(3) > .card-body > :nth-child(1) > label')
+    cy.get('#name').type('siti aisyah')
+    cy.get(':nth-child(3) > .card-body > :nth-child(2) > label')
+    cy.get('#phone').type('9898989')
+    cy.get(':nth-child(3) > .card-body > :nth-child(3) > label')
+    cy.get('#email').type('yahuuud123@gmail.com')
+    cy.get(':nth-child(3) > .card-body > :nth-child(4) > label')
+    cy.get('#password').type('123racha')
+    cy.get('.card-body > :nth-child(5) > label')
+    cy.get('#address').type('jakarta')
+    cy.get('.card-body > .btn').click()
+
+    cy.get(':nth-child(4) > .card-header')
+    cy.get('[for="gender"]')
+    cy.get('#female').click()
+    cy.get('[for="week"]')
+    cy.get('#tuesday').click()
+
+    cy.get(':nth-child(5) > .card-header')
+    cy.get(':nth-child(5) > .card-body > label')
+    cy.get('.custom-select')
+
+    cy.get(':nth-child(6) > .card-header')
+    cy.get(':nth-child(1) > [for="experience"]')
+    cy.get(':nth-child(1) > :nth-child(3) > .custom-control-label').click()
+    cy.get('[for="tools"]')
+    cy.get(':nth-child(2) > :nth-child(2) > .custom-control-label').click()
+
+    cy.get(':nth-child(7) > .card-header')
+    cy.get('[for="exampleInputFile"]')
+    cy.get('#inputGroupFile02').click()
+    cy.get('.input-group-text')
+
+  }) 
+})

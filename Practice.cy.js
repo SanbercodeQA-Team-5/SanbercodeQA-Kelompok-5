@@ -1,0 +1,15 @@
+describe('Practice', () => {
+  it('berhasil ke laman Practice', () => {
+    cy.visit('https://itera-qa.azurewebsites.net/')
+    cy.get('#navbarColor01 > :nth-child(1) > :nth-child(2) > .nav-link').click().should('be.visible')
+    cy.get('h2').should('be.visible')
+    cy.get(':nth-child(2) > .card-header')
+    cy.get(':nth-child(2) > p > .btn').click().should('be.visible') 
+    cy.get(':nth-child(3) > .card-header')
+    cy.get(':nth-child(3) > p > .btn').click().should('be.visible') 
+    cy.get(':nth-child(4) > .card-header')
+    cy.get(':nth-child(4) > p > .btn').click().should('be.visible') 
+    cy.get(':nth-child(5) > .card-header')
+    cy.get(':nth-child(5) > p > .btn').click().should('be.visible')
+  })
+})
