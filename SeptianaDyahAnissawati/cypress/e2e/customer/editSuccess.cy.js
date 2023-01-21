@@ -1,4 +1,4 @@
-describe('Edit Customer Random', () => {
+describe('Edit Customer Success (Positif)', () => {
   it('passes', () => {
     // visit the Itera web login
     cy.visit('https://itera-qa.azurewebsites.net/')
@@ -14,7 +14,7 @@ describe('Edit Customer Random', () => {
     cy.get('h1').should('be.visible')
 
     // search
-    cy.get('#searching').type('Septiana')
+    cy.get('#searching').type('Septianas')
     cy.contains('input.btn.btn-secondary.my-2.my-sm-0','Search').click()
 
     cy.get('h1').should('be.visible')
@@ -22,17 +22,17 @@ describe('Edit Customer Random', () => {
     // edit customer
     cy.contains('a.btn.btn-outline-primary','Edit').click()
     // name
-    cy.get('#Name').clear().type('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa')
+    cy.get('#Name').clear().type('Septianass')
     // company
-    cy.get('#Company').clear().type('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa')
+    cy.get('#Company').clear().type('Institut Teknologi Nopember')
     // address
-    cy.get('#Address').clear().type('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa')
+    cy.get('#Address').clear().type('Sukolilo')
     // city
-    cy.get('#City').clear().type('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa')
+    cy.get('#City').clear().type('Surabaya')
     // phone
-    cy.get('#Phone').clear().type('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa')
+    cy.get('#Phone').clear().type('123')
     // email
-    cy.get('#Email').clear().type('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa')
+    cy.get('#Email').clear().type('septiana@gmail.com')
     // button submit
     cy.get('.btn.btn-primary').click()
 

@@ -1,4 +1,4 @@
-describe('Edit Customer Empty', () => {
+describe('Create Customer Empty (Negatif)', () => {
   it('passes', () => {
     // visit the Itera web login
     cy.visit('https://itera-qa.azurewebsites.net/')
@@ -13,26 +13,20 @@ describe('Edit Customer Empty', () => {
 
     cy.get('h1').should('be.visible')
 
-    // search
-    cy.get('#searching').type('Septiana')
-    cy.contains('input.btn.btn-secondary.my-2.my-sm-0','Search').click()
-
-    cy.get('h1').should('be.visible')
-
-    // edit customer
-    cy.contains('a.btn.btn-outline-primary','Edit').click()
+    // create customer
+    cy.contains('a.btn.btn-primary','Create New').click()
     // name
-    cy.get('#Name').clear().type(' ')
+    cy.get('#Name').type(' ')
     // company
-    cy.get('#Company').clear().type(' ')
+    cy.get('#Company').type(' ')
     // address
-    cy.get('#Address').clear().type(' ')
+    cy.get('#Address').type(' ')
     // city
-    cy.get('#City').clear().type(' ')
+    cy.get('#City').type(' ')
     // phone
-    cy.get('#Phone').clear().type(' ')
+    cy.get('#Phone').type(' ')
     // email
-    cy.get('#Email').clear().type(' ')
+    cy.get('#Email').type(' ')
     // button submit
     cy.get('.btn.btn-primary').click()
 

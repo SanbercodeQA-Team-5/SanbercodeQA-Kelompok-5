@@ -1,4 +1,4 @@
-describe('Create Customer Empty', () => {
+describe('Create Customer Data Maximum (Negatif)', () => {
   it('passes', () => {
     // visit the Itera web login
     cy.visit('https://itera-qa.azurewebsites.net/')
@@ -16,22 +16,21 @@ describe('Create Customer Empty', () => {
     // create customer
     cy.contains('a.btn.btn-primary','Create New').click()
     // name
-    cy.get('#Name').type(' ')
+    cy.get('#Name').type('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa')
     // company
-    cy.get('#Company').type(' ')
+    cy.get('#Company').type('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa')
     // address
-    cy.get('#Address').type(' ')
+    cy.get('#Address').type('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa')
     // city
-    cy.get('#City').type(' ')
+    cy.get('#City').type('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa')
     // phone
-    cy.get('#Phone').type(' ')
+    cy.get('#Phone').type('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa')
     // email
-    cy.get('#Email').type(' ')
+    cy.get('#Email').type('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa')
     // button submit
     cy.get('.btn.btn-primary').click()
 
-    cy.get('h1').should('be.visible')
-    cy.get('body > div > div:nth-child(4) > form > table > tbody > tr:nth-child(5) > td > label').should('contain', 'Failed Data')
+    cy.get('h2').should('be.visible')
 
   })
   Cypress.on('uncaught:exception', (err, runnable) => {

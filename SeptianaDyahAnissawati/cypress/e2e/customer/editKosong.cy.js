@@ -1,4 +1,4 @@
-describe('Edit Customer Random', () => {
+describe('Edit Customer Empty (Negatif)', () => {
   it('passes', () => {
     // visit the Itera web login
     cy.visit('https://itera-qa.azurewebsites.net/')
@@ -22,17 +22,17 @@ describe('Edit Customer Random', () => {
     // edit customer
     cy.contains('a.btn.btn-outline-primary','Edit').click()
     // name
-    cy.get('#Name').clear().type('@171554')
+    cy.get('#Name').clear().type(' ')
     // company
-    cy.get('#Company').clear().type('193175')
+    cy.get('#Company').clear().type(' ')
     // address
-    cy.get('#Address').clear().type('$#@')
+    cy.get('#Address').clear().type(' ')
     // city
-    cy.get('#City').clear().type('#@*980')
+    cy.get('#City').clear().type(' ')
     // phone
-    cy.get('#Phone').clear().type('---=+')
+    cy.get('#Phone').clear().type(' ')
     // email
-    cy.get('#Email').clear().type('!24@nissa.yahoo')
+    cy.get('#Email').clear().type(' ')
     // button submit
     cy.get('.btn.btn-primary').click()
 

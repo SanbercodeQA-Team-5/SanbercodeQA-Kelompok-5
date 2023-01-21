@@ -1,4 +1,4 @@
-describe('Create Customer Success', () => {
+describe('Create Customer Random (negatif)', () => {
   it('passes', () => {
     // visit the Itera web login
     cy.visit('https://itera-qa.azurewebsites.net/')
@@ -16,21 +16,21 @@ describe('Create Customer Success', () => {
     // create customer
     cy.contains('a.btn.btn-primary','Create New').click()
     // name
-    cy.get('#Name').type('Septiana')
+    cy.get('#Name').type('@171554')
     // company
-    cy.get('#Company').type('ITS')
+    cy.get('#Company').type('---')
     // address
-    cy.get('#Address').type('Sukolilo')
+    cy.get('#Address').type('###')
     // city
-    cy.get('#City').type('Surabaya')
+    cy.get('#City').type('$$$&')
     // phone
-    cy.get('#Phone').type('+628')
+    cy.get('#Phone').type('+==')
     // email
-    cy.get('#Email').type('septianas@gmail.com')
+    cy.get('#Email').type('***')
     // button submit
     cy.get('.btn.btn-primary').click()
 
-    cy.get('h1').should('be.visible')
+    cy.get('h2').should('be.visible')
 
   })
   Cypress.on('uncaught:exception', (err, runnable) => {
