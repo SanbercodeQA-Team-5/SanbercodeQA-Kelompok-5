@@ -1,0 +1,33 @@
+
+
+import unittest
+import time
+from selenium import webdriver 
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions as EC
+from webdriver_manager.chrome import ChromeDriverManager
+
+class TestSignupRegister(unittest.TestCase): 
+
+    def setUp(self): 
+        self.driver = webdriver.Chrome(ChromeDriverManager().install())
+        
+    def test_Signup_Negatif(self): #
+        driver = self.driver
+        driver.get("https://itera-qa.azurewebsites.net/UserRegister/NewUser") # buka situs
+        driver.maximize_window()    
+        time.sleep(3)
+        driver.find_element(By.ID,"submit").click()
+
+        response_message = driver.find_element(By.ID,"FirstName-eror").text
+        self.assertEqual(response_message, 'Please enter first name') #eror firstname 
+        response_message = driver.find_element(By.ID,"Surname-eror").text
+        self.assertEqual(response_message, 'Please enter surname') #eror surname
+        response_message = driver.find_element(By.ID,"Username-eror").text
+        self.assertEqual(response_message, 'Please enter Username') #eror username
+        response_message = driver.find_element(By.ID,"Password-eror").text
+        self.assertEqual(response_message, 'Please enter Password') #eror password 
+
+unittest.main()
